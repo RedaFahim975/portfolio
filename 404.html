@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#f5f4ef" />
+
+  <title>404 | Page not found - Reda Fahim</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Root-relative paths so this page works at any URL depth -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="is-loading">
+
+  <script>
+    try {
+      var savedTheme = localStorage.getItem("reda-portfolio-theme");
+      if (savedTheme === "dark" || (savedTheme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.body.classList.add("dark-mode");
+      }
+    } catch (error) {}
+  </script>
+
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <div class="custom-cursor" aria-hidden="true">
+    <span class="custom-cursor__mark">RF</span>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="/" class="nav__logo" aria-label="Reda Fahim home">RF<span>.</span></a>
+
+      <div class="nav__links">
+        <a href="/#work">Work</a>
+        <a href="/#about">About</a>
+        <a href="/#capabilities">Capabilities</a>
+        <a href="/#tools">Tools</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+          <span class="theme-toggle__icon">☾</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title" aria-hidden="true">
+
+    <div class="mobile-menu__top">
+      <span id="mobile-menu-title">Navigation</span>
+      <button class="mobile-menu__close" type="button" aria-label="Close menu">×</button>
+    </div>
+
+    <div class="mobile-menu__links">
+      <a href="/">Home <span>01</span></a>
+      <a href="/#work">Work <span>02</span></a>
+      <a href="/#about">About <span>03</span></a>
+      <a href="/#capabilities">Capabilities <span>04</span></a>
+      <a href="/#tools">Tools <span>05</span></a>
+      <a href="/#contact">Contact <span>06</span></a>
+    </div>
+
+    <div class="mobile-menu__footer">
+      <span>Marrakech, Morocco</span>
+      <span>2026</span>
+    </div>
+
+  </div>
+
+  <main>
+
+    <section class="hero not-found">
+
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__graphic" aria-hidden="true">
+        <div class="hero__graphic-orbit hero__graphic-orbit--outer"><span></span></div>
+        <div class="hero__graphic-orbit hero__graphic-orbit--inner"><span></span></div>
+        <span class="hero__graphic-core"></span>
+        <span class="hero__graphic-cross hero__graphic-cross--top">+</span>
+        <span class="hero__graphic-cross hero__graphic-cross--bottom">+</span>
+        <div class="hero__graphic-caption"><span>ERROR / 404</span></div>
+      </div>
+
+      <p class="not-found__code" aria-hidden="true">404</p>
+
+      <div class="hero__topline reveal-hero">
+        <span>REDA FAHIM</span>
+        <span>Page not found</span>
+      </div>
+
+      <div class="not-found__inner">
+
+        <div class="hero__eyebrow reveal-hero">
+          <span class="status-dot"></span>
+          Error 404
+        </div>
+
+        <h1 class="hero__title reveal-hero">
+          Lost in the
+          <span class="hero__title-accent">interface.</span>
+        </h1>
+
+        <p class="not-found__text reveal-hero">
+          The page you're looking for doesn't exist, or it has moved.
+          Let's get you back to something that works.
+        </p>
+
+        <p class="not-found__path reveal-hero">
+          Requested: <code id="not-found-path"></code>
+        </p>
+
+        <div class="not-found__actions reveal-hero">
+          <a href="/" class="cv-button">
+            <span>Back to home</span>
+            <span aria-hidden="true">↖</span>
+          </a>
+
+          <a href="/#work" class="text-link">
+            <span>See selected work</span>
+            <span class="text-link__arrow">↘</span>
+          </a>
+
+          <a href="/#contact" class="text-link">
+            <span>Get in touch</span>
+            <span class="text-link__arrow">↘</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero__meta reveal-hero">
+        <span>UI/UX</span>
+        <span>Brand</span>
+        <span>Front-end</span>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    document.getElementById("not-found-path").textContent = window.location.pathname;
+  </script>
+  <script src="/main.js"></script>
+
+</body>
+</html>

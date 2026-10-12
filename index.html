@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Reda Fahim | UI/UX Designer, Brand Designer and Front-End Web Developer. Portfolio of digital products, identities and web experiences."
+  />
+
+  <meta name="theme-color" content="#f5f4ef" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Reda Fahim | Designer & Developer" />
+  <meta
+    property="og:description"
+    content="UI/UX Designer, Brand Designer and Front-End Web Developer creating thoughtful digital experiences."
+  />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reda Fahim | Designer & Developer" />
+  <meta
+    name="twitter:description"
+    content="UI/UX Designer, Brand Designer and Front-End Web Developer creating thoughtful digital experiences."
+  />
+
+  <title>Reda Fahim | Designer & Developer</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <noscript>
+    <style>
+      .loader { display: none; }
+      body.is-loading { overflow: auto; }
+      .reveal-hero { animation-play-state: running; }
+      .reveal { opacity: 1; transform: none; filter: none; }
+    </style>
+  </noscript>
+</head>
+
+<body class="is-loading">
+
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    try {
+      var savedTheme = localStorage.getItem("reda-portfolio-theme");
+      if (savedTheme === "dark" || (savedTheme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.body.classList.add("dark-mode");
+      }
+    } catch (error) {}
+  </script>
+
+  <!-- =========================
+       LOADER
+  ========================== -->
+
+  <div class="loader" id="loader" role="status" aria-label="Loading">
+    <div class="loader__inner">
+      <span class="loader__mark" aria-hidden="true">RF<span>.</span></span>
+      <div class="loader__bar" aria-hidden="true"><span></span></div>
+      <div class="loader__meta" aria-hidden="true">
+        <span>Designer × Engineer</span>
+        <span><span id="loader-count">000</span>%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================
+       SCROLL PROGRESS
+  ========================== -->
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span></span>
+  </div>
+
+  <div class="custom-cursor" aria-hidden="true">
+    <span class="custom-cursor__mark">RF</span>
+  </div>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="#home" class="nav__logo" aria-label="Reda Fahim home">
+        RF<span>.</span>
+      </a>
+
+      <div class="nav__links">
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#capabilities" data-nav="capabilities">Capabilities</a>
+        <a href="#tools" data-nav="tools">Tools</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch theme"
+          aria-pressed="false"
+        >
+          <span class="theme-toggle__icon">☾</span>
+        </button>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- =========================
+       MOBILE MENU
+  ========================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobile-menu"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="mobile-menu-title"
+    aria-hidden="true"
+  >
+
+    <div class="mobile-menu__top">
+      <span id="mobile-menu-title">Navigation</span>
+
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Close menu"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="mobile-menu__links">
+      <a href="#home">Home <span>01</span></a>
+      <a href="#work">Work <span>02</span></a>
+      <a href="#about">About <span>03</span></a>
+      <a href="#capabilities">Capabilities <span>04</span></a>
+      <a href="#tools">Tools <span>05</span></a>
+      <a href="#contact">Contact <span>06</span></a>
+    </div>
+
+    <div class="mobile-menu__footer">
+      <span>Marrakech, Morocco</span>
+      <span>2026</span>
+    </div>
+
+  </div>
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__graphic" aria-hidden="true">
+        <div class="hero__graphic-orbit hero__graphic-orbit--outer">
+          <span></span>
+        </div>
+        <div class="hero__graphic-orbit hero__graphic-orbit--inner">
+          <span></span>
+        </div>
+        <span class="hero__graphic-core"></span>
+        <span class="hero__graphic-cross hero__graphic-cross--top">+</span>
+        <span class="hero__graphic-cross hero__graphic-cross--bottom">+</span>
+        <div class="hero__graphic-caption">
+          <span>DESIGN / SYSTEMS</span>
+        </div>
+      </div>
+
+      <div class="hero__topline reveal-hero">
+        <span>REDA FAHIM</span>
+        <span>Available for selected work</span>
+      </div>
+
+      <div class="hero__content">
+
+        <figure class="hero__portrait reveal-hero" aria-label="Portrait with an interactive code effect">
+          <img
+            class="hero__portrait-image"
+            src="https://i.ibb.co/3Y8XSMrH/div-class-keydiv.png"
+            alt="div class keydiv"
+            draggable="false"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <canvas class="hero__portrait-effect" aria-hidden="true"></canvas>
+          <figcaption>DRAG TO REVEAL</figcaption>
+        </figure>
+
+        <div class="hero__eyebrow reveal-hero">
+          <span class="status-dot"></span>
+          Designer × Engineer
+        </div>
+
+        <h1 class="hero__title reveal-hero">
+          I design digital
+          <span class="hero__title-accent">experiences.</span>
+        </h1>
+
+        <!-- ROTATING ROLE -->
+        <div class="hero__role reveal-hero">
+
+          <div class="hero__role-meta">
+            <span class="hero__role-label">Currently</span>
+            <span class="hero__role-index">
+              <span id="role-index">01</span> / 03
+            </span>
+          </div>
+
+          <div
+            class="role-window"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <span id="role">UI/UX Designer</span>
+          </div>
+
+        </div>
+
+        <div class="hero__bottom reveal-hero">
+
+          <div class="hero__intro-actions">
+            <p>
+              I combine visual design, interface thinking and front-end
+              development to turn ideas into things people can actually use.
+            </p>
+
+            <div class="hero__cta-row">
+              <a href="#work" class="text-link">
+                <span>Explore selected work</span>
+                <span class="text-link__arrow">↘</span>
+              </a>
+
+              <a
+                href="./CV_Reda_Fahim-1.pdf"
+                class="cv-button"
+                download="Reda-Fahim-CV.pdf"
+              >
+                <span>Download my CV</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero__meta reveal-hero">
+        <span>UI/UX</span>
+        <span>Brand</span>
+        <span>Front-end</span>
+      </div>
+
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SELECTED WORK
+    ========================== -->
+
+    <section class="section work-section" id="work">
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+          <div class="section-heading__number">01</div>
+
+          <div>
+            <p class="section-label">Selected work</p>
+            <h2>Things I've built<br />with intention.</h2>
+          </div>
+
+          <span class="section-heading__line"></span>
+        </div>
+
+
+        <div class="projects">
+
+          <!-- PROJECT 01 -->
+
+          <article class="project reveal">
+
+            <div class="project__card">
+
+              <div class="project__visual project__visual--saga">
+                <div class="project__visual-grid"></div>
+
+                <div class="saga-mark">
+                  <span>SAGA</span>
+                  <small>LITERATURE CLUB</small>
+                </div>
+
+                <span class="project__visual-number">01</span>
+              </div>
+
+              <div class="project__content">
+
+                <div class="project__meta">
+                  <span>Brand Identity</span>
+                  <span>2026</span>
+                </div>
+
+                <div class="project__title-row">
+                  <h3>SAGA</h3>
+
+                </div>
+
+                <p>
+                  A visual identity system designed to give a literature
+                  community a sharper, more contemporary presence.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 02 -->
+
+          <article class="project reveal">
+
+            <div class="project__card">
+
+              <div class="project__visual project__visual--hub">
+
+                <div class="hub-window">
+                  <div class="hub-window__top">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <div class="hub-window__body">
+                    <div class="hub-sidebar"></div>
+
+                    <div class="hub-content">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="project__visual-number">02</span>
+
+              </div>
+
+              <div class="project__content">
+
+                <div class="project__meta">
+                  <span>UI / UX</span>
+                  <span>2026</span>
+                </div>
+
+                <div class="project__title-row">
+                  <h3>ENSA HUB</h3>
+
+                </div>
+
+                <p>
+                  A student-focused digital experience exploring better
+                  information architecture, navigation and campus utility.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 03 -->
+
+          <article class="project reveal">
+
+            <div class="project__card">
+
+              <div class="project__visual project__visual--web">
+
+                <div class="web-browser">
+
+                  <div class="web-browser__bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <div></div>
+                  </div>
+
+                  <div class="web-browser__hero">
+                    <small>BUILD / DESIGN / ITERATE</small>
+                    <strong>Digital<br />experiences.</strong>
+
+                    <span></span>
+                  </div>
+
+                </div>
+
+                <span class="project__visual-number">03</span>
+
+              </div>
+
+              <div class="project__content">
+
+                <div class="project__meta">
+                  <span>Front-end</span>
+                  <span>2026</span>
+                </div>
+
+                <div class="project__title-row">
+                  <h3>Living Interface</h3>
+
+                </div>
+
+                <p>
+                  Turning interface concepts into responsive, interactive
+                  websites where design and implementation meet.
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section about-section" id="about">
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <div class="section-heading__number">02</div>
+
+          <div>
+            <p class="section-label">About</p>
+            <h2>Design with<br />a reason behind it.</h2>
+          </div>
+
+          <span class="section-heading__line"></span>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-intro reveal">
+
+            <span class="about-intro__mark">RF</span>
+
+            <h3>
+              I'm an engineering student who became obsessed with the space
+              between design and technology.
+            </h3>
+
+          </div>
+
+
+          <div class="about-copy reveal">
+
+            <p>
+              I'm currently studying engineering at ENSA Marrakech, while
+              building my practice around visual design, UI/UX and front-end
+              development.
+            </p>
+
+            <p>
+              I don't want to stop at making something look good. I want to
+              understand why it works, how people interact with it and how
+              the final thing is actually built.
+            </p>
+
+            <p class="about-highlight">
+              <span>01</span>
+              Design is only half the job.
+              <strong>Making it work is the other half.</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CAPABILITIES
+    ========================== -->
+
+    <section class="section capabilities-section" id="capabilities">
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+
+          <div class="section-heading__number">03</div>
+
+          <div>
+            <p class="section-label">Capabilities</p>
+            <h2>Where I<br />add value.</h2>
+          </div>
+
+          <span class="section-heading__line"></span>
+
+        </div>
+
+
+        <div class="capabilities">
+
+          <article class="capability reveal">
+
+            <div class="capability__number">01</div>
+
+            <div class="capability__main">
+              <h3>UI / UX Design</h3>
+
+              <p>
+                Interfaces that are clear, purposeful and designed around
+                how people actually navigate digital products.
+              </p>
+
+              <div class="capability__tags">
+                <span>Figma</span>
+                <span>Wireframes</span>
+                <span>Prototyping</span>
+                <span>Design Systems</span>
+              </div>
+            </div>
+
+            <span class="capability__arrow">↗</span>
+
+          </article>
+
+
+          <article class="capability reveal">
+
+            <div class="capability__number">02</div>
+
+            <div class="capability__main">
+              <h3>Brand Design</h3>
+
+              <p>
+                Visual identities with enough structure to stay consistent
+                and enough personality to be remembered.
+              </p>
+
+              <div class="capability__tags">
+                <span>Identity</span>
+                <span>Typography</span>
+                <span>Art Direction</span>
+                <span>Visual Systems</span>
+              </div>
+            </div>
+
+            <span class="capability__arrow">↗</span>
+
+          </article>
+
+
+          <article class="capability reveal">
+
+            <div class="capability__number">03</div>
+
+            <div class="capability__main">
+              <h3>Front-end Development</h3>
+
+              <p>
+                Responsive interfaces built with attention to structure,
+                performance, accessibility and interaction.
+              </p>
+
+              <div class="capability__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+
+            <span class="capability__arrow">↗</span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOOLS
+    ========================== -->
+
+    <section class="section tools-section" id="tools">
+
+      <div class="section-inner">
+
+        <div class="section-heading reveal">
+          <div class="section-heading__number">04</div>
+
+          <div>
+            <p class="section-label">Tools I use</p>
+            <h2>A few tools<br />behind the work.</h2>
+          </div>
+
+          <span class="section-heading__line"></span>
+        </div>
+
+        <div class="tools-grid">
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--figma" aria-hidden="true">
+                <svg viewBox="3 -4 58 72" focusable="false">
+                  <path fill="#5B21B6" d="M22 5c-5.523 0-10 4.477-10 10s4.477 10 10 10h10V5H22Z" />
+                  <path fill="#7C3AED" d="M32 5v20h10c5.523 0 10-4.477 10-10S47.523 5 42 5H32Z" />
+                  <path fill="#8B5CF6" d="M12 35c0 5.523 4.477 10 10 10h10V25H22c-5.523 0-10 4.477-10 10Z" />
+                  <path fill="#A78BFA" d="M32 25v20h10c5.523 0 10-4.477 10-10s-4.477-10-10-10H32Z" />
+                  <path fill="#C4B5FD" d="M22 45c-5.523 0-10 4.477-10 10s4.477 10 10 10h10V45H22Z" />
+                </svg>
+              </span>
+              <span class="tool-card__name">Figma</span>
+              <span class="tool-card__type">Interface design</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--canva" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <text class="tool-logo-canva" x="32" y="39" text-anchor="middle">Canva</text>
+                </svg>
+              </span>
+              <span class="tool-card__name">Canva</span>
+              <span class="tool-card__type">Visual design</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--photoshop" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <rect x="5" y="5" width="54" height="54" rx="11" />
+                  <text x="32" y="40" text-anchor="middle">Ps</text>
+                </svg>
+              </span>
+              <span class="tool-card__name">Photoshop</span>
+              <span class="tool-card__type">Image editing</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--illustrator" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <rect x="5" y="5" width="54" height="54" rx="13" />
+                  <text x="32" y="40" text-anchor="middle">Ai</text>
+                </svg>
+              </span>
+              <span class="tool-card__name">Illustrator</span>
+              <span class="tool-card__type">Vector graphics</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--vscode" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <path d="M46 7 25 25 14 17 5 22v20l9 5 11-8 21 18 12-5V12L46 7Zm0 12v26L30 32l16-13ZM13 27l6 5-6 5V27Z" />
+                </svg>
+              </span>
+              <span class="tool-card__name">VS Code</span>
+              <span class="tool-card__type">Code editor</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--html" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <path d="M9 4h46l-4.2 47.5L32 59 13.2 51.5 9 4Z" />
+                  <text x="32" y="43" text-anchor="middle">5</text>
+                </svg>
+              </span>
+              <span class="tool-card__name">HTML</span>
+              <span class="tool-card__type">Structure</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--css" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <path d="M9 4h46l-4.2 47.5L32 59 13.2 51.5 9 4Z" />
+                  <text x="32" y="43" text-anchor="middle">3</text>
+                </svg>
+              </span>
+              <span class="tool-card__name">CSS</span>
+              <span class="tool-card__type">Visual styling</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--javascript" aria-hidden="true">
+                <svg viewBox="0 0 64 64" focusable="false">
+                  <rect x="5" y="5" width="54" height="54" rx="7" />
+                  <text x="48" y="48" text-anchor="end">JS</text>
+                </svg>
+              </span>
+              <span class="tool-card__name">JavaScript</span>
+              <span class="tool-card__type">Interaction</span>
+            </div>
+          </article>
+
+          <article class="tool-card reveal" data-magnetic>
+            <div class="tool-card__surface">
+              <span class="tool-card__icon tool-card__icon--github" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.51-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.58 10.58 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.25-5.1 5.52.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+                </svg>
+              </span>
+              <span class="tool-card__name">GitHub</span>
+              <span class="tool-card__type">Code hosting</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section contact-section" id="contact">
+
+      <div class="contact-section__orb" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <div class="contact-content reveal">
+
+          <p class="section-label">05 | Contact</p>
+
+          <h2>
+            Have something<br />
+            worth building?
+          </h2>
+
+          <p class="contact-description">
+            I'm open to selected freelance projects, internships and
+            collaborations where design and technology overlap.
+          </p>
+
+
+          <div class="contact-links">
+            <a
+              class="contact-linkedin"
+              href="https://www.linkedin.com/in/redafahim/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Reda Fahim on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect width="24" height="24" rx="4" fill="#0A66C2" />
+                <path fill="#fff" d="M6.2 9.1h2.5v8H6.2zm1.25-1.1a1.45 1.45 0 1 1 0-2.9 1.45 1.45 0 0 1 0 2.9zM10 9.1h2.4v1.1h.04c.34-.64 1.14-1.32 2.35-1.32 2.52 0 2.99 1.66 2.99 3.82v4.4h-2.5v-3.9c0-.93-.02-2.12-1.3-2.12-1.3 0-1.5 1.01-1.5 2.05v3.97H10z" />
+              </svg>
+            </a>
+          </div>
+
+          <form
+            class="footer-message-form"
+            id="footer-message-form"
+            aria-label="Send an email message"
+          >
+            <input
+              id="footer-subject"
+              name="subject"
+              type="text"
+              aria-label="Email subject"
+              placeholder="Email subject"
+              required
+            />
+            <textarea
+              id="footer-message"
+              name="message"
+              rows="4"
+              aria-label="Email message"
+              placeholder="Write your email message here..."
+              required
+            ></textarea>
+            <button type="submit">
+              <span>Open email</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <script src="./main.js"></script>
+
+</body>
+</html>
