@@ -1,19 +1,21 @@
 /* =========================================================
-   REDA FAHIM | PORTFOLIO JS
+    REDA FAHIM | PORTFOLIO JS
 ========================================================= */
 
 "use strict";
 
 
 /* =========================================================
-   CONFIG
+    CONFIG
 ========================================================= */
 
 const CONTACT_EMAIL = "fahimreda139@gmail.com";
+const CV_DOWNLOAD_URL = "./CV_Reda_Fahim-1.pdf";
+const CV_DOWNLOAD_FILENAME = "Reda-Fahim-CV.pdf";
 
 
 /* =========================================================
-   DOM
+    DOM
 ========================================================= */
 
 const body = document.body;
@@ -55,7 +57,7 @@ const heroPortraitEffect = document.querySelector(".hero__portrait-effect");
 
 
 /* =========================================================
-   REDUCED MOTION
+    REDUCED MOTION
 ========================================================= */
 
 const prefersReducedMotion = window.matchMedia(
@@ -68,7 +70,7 @@ const canUsePointer = window.matchMedia(
 
 
 /* =========================================================
-   THEME
+    THEME
 ========================================================= */
 
 const THEME_KEY = "reda-portfolio-theme";
@@ -161,7 +163,7 @@ applyTheme(getInitialTheme());
 
 
 /* =========================================================
-   HEADER / NAVIGATION
+    HEADER / NAVIGATION
 ========================================================= */
 
 function updateHeader() {
@@ -264,7 +266,7 @@ handleScroll();
 
 
 /* =========================================================
-   MOBILE MENU
+    MOBILE MENU
 ========================================================= */
 
 let menuWasOpenedByUser = false;
@@ -427,7 +429,7 @@ window.addEventListener(
 
 
 /* =========================================================
-   ROTATING ROLE
+    ROTATING ROLE
 ========================================================= */
 
 const roles = [
@@ -567,7 +569,7 @@ document.addEventListener(
 
 
 /* =========================================================
-   SCROLL REVEALS
+    SCROLL REVEALS
 ========================================================= */
 
 if (
@@ -626,7 +628,7 @@ if (
 
 
 /* =========================================================
-   PORTRAIT CODE REVEAL
+    PORTRAIT CODE REVEAL
 ========================================================= */
 
 if (heroPortrait && heroPortraitEffect) {
@@ -822,7 +824,7 @@ if (heroPortrait && heroPortraitEffect) {
 
 
 /* =========================================================
-   CUSTOM CURSOR
+    CUSTOM CURSOR
 ========================================================= */
 
 const customCursor = document.querySelector(".custom-cursor");
@@ -916,7 +918,7 @@ if (
 
 
 /* =========================================================
-   PROJECT PARALLAX
+    PROJECT PARALLAX
 ========================================================= */
 
 if (
@@ -994,7 +996,7 @@ if (
 
 
 /* =========================================================
-   MAGNETIC TOOL CARDS
+    MAGNETIC TOOL CARDS
 ========================================================= */
 
 if (canUsePointer && !prefersReducedMotion.matches) {
@@ -1073,7 +1075,7 @@ if (canUsePointer && !prefersReducedMotion.matches) {
 
 
 /* =========================================================
-   FOOTER MESSAGE FORM
+    FOOTER MESSAGE FORM
 ========================================================= */
 
 const footerMessageForm = document.getElementById("footer-message-form");
@@ -1092,7 +1094,47 @@ footerMessageForm?.addEventListener("submit", (event) => {
 
 
 /* =========================================================
-   LOADER
+    CV DOWNLOAD (virtual file download)
+========================================================= */
+
+const cvDownloadLink = document.getElementById("cv-download");
+
+async function startCvDownload(event) {
+  event.preventDefault();
+
+  const url = cvDownloadLink?.dataset.cvUrl || CV_DOWNLOAD_URL;
+  const filename = cvDownloadLink?.dataset.cvFilename || cvDownloadLink?.getAttribute("download") || CV_DOWNLOAD_FILENAME;
+
+  try {
+    const response = await fetch(url, { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error("CV request failed");
+    }
+
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const tempLink = document.createElement("a");
+    tempLink.href = blobUrl;
+    tempLink.download = filename;
+    tempLink.rel = "noopener";
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    tempLink.remove();
+
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+    return;
+  } catch (error) {
+    console.warn("CV download fallback used:", error);
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Request CV")}&body=${encodeURIComponent("Hi Reda, can you please send me your CV in PDF format?")}`;
+  }
+}
+
+cvDownloadLink?.addEventListener("click", startCvDownload);
+
+
+/* =========================================================
+    LOADER
 ========================================================= */
 
 const loader = document.getElementById("loader");
